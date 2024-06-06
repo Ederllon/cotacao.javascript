@@ -27,7 +27,7 @@ html
 
     <script src="script.js"></script>
 </body>
-</html>
+</html> 
 Passo 4: Requisição da API
 No arquivo JavaScript, você pode fazer uma requisição à API para obter as taxas de câmbio
  desejadas. Utilize a função fetch() para isso. Por exemplo:
