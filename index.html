@@ -1,1 +1,22 @@
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotação de Moedas</title>
+</head>
+<body>
+    <h1>Cotação de Moedas</h1>
+    <label for="moeda">Escolha uma moeda:</label>
+    <select id="moeda">
+        <option value="USD">Dólar Americano (USD)</option>
+        <option value="EUR">Euro (EUR)</option>
+        <!-- Adicione outras moedas conforme necessário -->
+    </select>
+    <button onclick="getCotacao()">Obter Cotação</button>
+    <p id="resultado"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
