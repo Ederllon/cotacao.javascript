@@ -1,2 +1,2 @@
 # cotacao.javascript
-em construção....
+
