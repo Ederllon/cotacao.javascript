@@ -1,22 +1,21 @@
-// Defina uma função para obter a cotação da moeda selecionada
-function getCotacao() {
-    // Recupere o elemento select
-    var moedaSelect = document.getElementById("moeda");
-    // Obtenha o valor selecionado
-    var moedaSelecionada = moedaSelect.value;
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotação de Moedas</title>
+</head>
+<body>
+    <h1>Cotação de Moedas</h1>
+    <label for="moeda">Escolha uma moeda:</label>
+    <select id="moeda">
+        <option value="USD">Dólar Americano (USD)</option>
+        <option value="EUR">Euro (EUR)</option>
+        <option value="BRL">Real (BRL)</option>
+    </select>
+    <button onclick="getCotacao()">Obter Cotação</button>
+    <p id="resultado"></p>
 
-    // Faça uma requisição à API para obter a cotação da moeda
-    fetch(`https://api.exchangerate-api.com/v4/latest/${moedaSelecionada}`)
-        .then(response => response.json())
-        .then(data => {
-            // Acesse a cotação da moeda em relação ao dólar (padrão da API)
-            var cotação = data.rates.USD;
-            // Exiba o resultado na página
-            document.getElementById("resultado").innerText = `1 ${moedaSelecionada} = ${cotação} USD`;
-        })
-        .catch(error => {
-            // Em caso de erro, exiba uma mensagem
-            console.error('Erro ao obter cotação:', error);
-            document.getElementById("resultado").innerText = "Erro ao obter cotação. Por favor, tente novamente mais tarde.";
-        });
-}
+    <script src="script.js"></script>
+</body>
+</html>
